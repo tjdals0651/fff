@@ -1,126 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <module>
-	<grants>
-		<grant name="list" default="guest">
-			<title xml:lang="ko">목록</title>
-			<title xml:lang="zh-CN">目录</title>
-			<title xml:lang="jp">リスト</title>
-			<title xml:lang="en">list</title>
-			<title xml:lang="vi">Danh sách</title>
-			<title xml:lang="es">Lista</title>
-			<title xml:lang="zh-TW">列表</title>
-			<title xml:lang="tr">Liste</title>
-		</grant>
-		<grant name="view" default="guest">
-			<title xml:lang="ko">열람</title>
-			<title xml:lang="zh-CN">查看</title>
-			<title xml:lang="jp">閲覧</title>
-			<title xml:lang="en">view</title>
-			<title xml:lang="vi">Xem</title>
-			<title xml:lang="es">Opinión</title>
-			<title xml:lang="zh-TW">檢視</title>
-			<title xml:lang="tr">görüş</title>
-		</grant>
-		<grant name="write_document" default="guest">
-			<title xml:lang="ko">글 작성</title>
-			<title xml:lang="zh-CN">发表新主题</title>
-			<title xml:lang="jp">書き込み作成</title>
-			<title xml:lang="en">write document</title>
-			<title xml:lang="vi">Gửi bài viết</title>
-			<title xml:lang="es">Escribir el documento</title>
-			<title xml:lang="zh-TW">發表主題</title>
-			<title xml:lang="tr">belge yaz</title>
-		</grant>
-		<grant name="write_comment" default="guest">
-			<title xml:lang="ko">댓글 작성</title>
-			<title xml:lang="zh-CN">发表评论</title>
-			<title xml:lang="jp">コメント作成</title>
-			<title xml:lang="en">write comment</title>
-			<title xml:lang="vi">Gửi bình luận</title>
-			<title xml:lang="es">Escribir comentario</title>
-			<title xml:lang="zh-TW">發表評論</title>
-			<title xml:lang="es">yorum yaz</title>
-		</grant>
-		<grant name="consultation_read" default="manager">
-			<title xml:lang="ko">상담글 조회</title>
-			<title xml:lang="en">Consultation Document Read</title>
-			<title xml:lang="jp">相談文照会</title>
-		</grant>
-	</grants>
-	<permissions>
-		<permission action="dispBoardAdminInsertBoard" target="manager" />
-		<permission action="dispBoardAdminBoardInfo" target="manager" />
-		<permission action="dispBoardAdminExtraVars" target="manager" />
-		<permission action="dispBoardAdminBoardAdditionSetup" target="manager" />
-		<permission action="dispBoardAdminSkinInfo" target="manager" />
+    <grants />
+    <permissions />
+    <actions>
+        <action name="dispAdminIndex" type="view" index="true" />
+        <action name="dispAdminConfigGeneral" type="view" menu_name="adminConfigurationGeneral" menu_index="true" />
+        <action name="dispAdminConfigFtp" type="view" menu_name="adminConfigurationFtp" menu_index="true" />
+        <action name="dispAdminSetup" type="view" menu_name="adminMenuSetup" menu_index="true" />
+        <action name="dispAdminViewServerEnv" type="view" />
+		<action name="dispAdminCheckServerEnv" type="view" />
 
-		<permission action="procBoardAdminInsertBoard" target="manager" />
-		<permission action="procBoardAdminUpdateBoardFroBasic" target="manager" />
-		<permission action="procBoardAdminSaveCategorySettings" target="manager" />
+        <action name="procAdminRemoveIcons" type="controller" />
+		<action name="procAdminRecompileCacheFile" type="controller" />
+        <action name="procAdminLogout" type="controller" method="GET|POST" />
+        <action name="procAdminInsertDefaultDesignInfo" type="controller" />
+		<action name="procAdminToggleFavorite" type="controller" ruleset="toggleFavorite" />
+		<action name="procAdminEnviromentGatheringAgreement" type="controller" />
+		<action name="procAdminUpdateConfig" type="controller" />
+		<action name="procAdminDeleteLogo" type="controller" />
+		<action name="procAdminMenuReset" type="controller" />
+		<action name="procAdminUpdateSitelock" type="controller" />
+		<action name="procAdminUpdateEmbedWhitelist" type="controller" />
 
-		<permission action="getBoardAdminSimpleSetup" target="manager" />
-	</permissions>
-	<actions>
-		<action name="dispBoardContent" type="view" index="true" />
-		<action name="dispBoardNoticeList" type="view" />
-		<action name="dispBoardContentList" type="view" />
-		<action name="dispBoardContentView" type="view" />
-		<action name="dispBoardCategoryList" type="view" />
-		<action name="dispBoardContentCommentList" type="view" />
-		<action name="dispBoardContentFileList" type="view" />
-
-		<action name="dispBoardTagList" type="view" />
-		<action name="dispBoardWrite" type="view" standalone="false" meta-noindex="true" />
-		<action name="dispBoardDelete" type="view" standalone="false" meta-noindex="true" />
-		<action name="dispBoardWriteComment" type="view" standalone="false" meta-noindex="true" />
-		<action name="dispBoardReplyComment" type="view" standalone="false" meta-noindex="true" />
-		<action name="dispBoardModifyComment" type="view" standalone="false" meta-noindex="true" />
-		<action name="dispBoardDeleteComment" type="view" standalone="false" meta-noindex="true" />
-		<action name="dispBoardDeleteTrackback" type="view" standalone="false" meta-noindex="true" />
-		<action name="dispBoardMessage" type="view" meta-noindex="true" />
-
-		<action name="procBoardInsertDocument" type="controller" ruleset="insertDocument" standalone="false" />
-		<action name="procBoardDeleteDocument" type="controller" standalone="false" />
-		<action name="procBoardVoteDocument" type="controller" standalone="false" />
-		<action name="procBoardInsertComment" type="controller" standalone="false" />
-		<action name="procBoardDeleteComment" type="controller" standalone="false" />
-		<action name="procBoardDeleteTrackback" type="controller" standalone="false" />
-		<action name="procBoardVerificationPassword" type="controller" />
-
-		<!-- admin -->
-		<action name="dispBoardAdminContent" type="view" admin_index="true" menu_name="board" menu_index="true" />
-		<action name="dispBoardAdminBoardInfo" type="view"  menu_name="board" />
-		<action name="dispBoardAdminExtraVars" type="view"  menu_name="board" />
-		<action name="dispBoardAdminBoardAdditionSetup" type="view" menu_name="board"  />
-		<action name="dispBoardAdminInsertBoard" type="view" setup_index="true" menu_name="board" />
-		<action name="dispBoardAdminDeleteBoard" type="view" menu_name="board"  />
-		<action name="dispBoardAdminSkinInfo" type="view" menu_name="board"  />
-		<action name="dispBoardAdminMobileSkinInfo" type="view" menu_name="board"  />
-		<action name="dispBoardAdminGrantInfo" type="view" menu_name="board"  />
-		<action name="dispBoardAdminCategoryInfo" type="view" menu_name="board"  />
-		<action name="procBoardAdminInsertBoard" type="controller" ruleset="insertBoard" />
-		<action name="procBoardAdminDeleteBoard" type="controller" />
-		<action name="procBoardAdminUpdateBoardFroBasic" type="controller" ruleset="insertBoardForBasic" />
-		<action name="procBoardAdminSaveCategorySettings" type="controller" ruleset="saveCategorySettings" />
-
-		<action name="getBoardAdminSimpleSetup" type="model" simple_setup_index="true" />
-
-		<action name="dispBoardCategory" type="mobile" />
-		<action name="getBoardCommentPage" type="mobile" />
-	</actions>
+        <action name="getAdminFTPList" type="model" />
+        <action name="getAdminFTPPath" type="model" />
+        <action name="getSiteAllList" type="model" />
+    </actions>
 	<menus>
-		<menu name="board" type="all">
-			<title xml:lang="en">Board</title>
-			<title xml:lang="ko">게시판</title>
-			<title xml:lang="zh-CN">Board</title>
-			<title xml:lang="jp">Board</title>
-			<title xml:lang="es">Board</title>
-			<title xml:lang="ru">Board</title>
-			<title xml:lang="fr">Board</title>
-			<title xml:lang="zh-TW">Board</title>
-			<title xml:lang="vi">Board</title>
-			<title xml:lang="mn">Board</title>
-			<title xml:lang="tr">Board</title>
+		<menu name="adminConfigurationGeneral" type="all">
+			<title xml:lang="en">General</title>
+			<title xml:lang="ko">일반</title>
+			<title xml:lang="zh-CN">总览</title>
+			<title xml:lang="jp">一般</title>
+			<title xml:lang="es">General</title>
+			<title xml:lang="ru">General</title>
+			<title xml:lang="fr">General</title>
+			<title xml:lang="zh-TW">General</title>
+			<title xml:lang="vi">General</title>
+			<title xml:lang="mn">General</title>
+			<title xml:lang="tr">General</title>
+		</menu>
+		<menu name="adminMenuSetup" type="all">
+			<title xml:lang="en">Admin Setup</title>
+			<title xml:lang="ko">관리자 설정</title>
+			<title xml:lang="zh-CN">后台设置</title>
+			<title xml:lang="jp">管理者設定</title>
+			<title xml:lang="es">Admin Setup</title>
+			<title xml:lang="ru">Admin Setup</title>
+			<title xml:lang="fr">Admin Setup</title>
+			<title xml:lang="zh-TW">Admin Setup</title>
+			<title xml:lang="vi">Admin Setup</title>
+			<title xml:lang="mn">Admin Setup</title>
+			<title xml:lang="tr">Admin Setup</title>
+		</menu>
+		<menu name="adminConfigurationFtp" type="all">
+			<title xml:lang="en">FTP Configuration</title>
+			<title xml:lang="ko">FTP 설정</title>
+			<title xml:lang="zh-CN">FTP 配置</title>
+			<title xml:lang="jp">FTP設定</title>
+			<title xml:lang="es">FTP Configuration</title>
+			<title xml:lang="ru">FTP Configuration</title>
+			<title xml:lang="fr">FTP Configuration</title>
+			<title xml:lang="zh-TW">FTP Configuration</title>
+			<title xml:lang="vi">FTP Configuration</title>
+			<title xml:lang="mn">FTP Configuration</title>
+			<title xml:lang="tr">FTP Configuration</title>
 		</menu>
 	</menus>
 </module>

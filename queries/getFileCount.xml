@@ -1,6 +1,6 @@
-<query id="getDocumentCount" action="select">
+<query id="getFileCount" action="select">
     <tables>
-        <table name="documents" />
+        <table name="files" />
     </tables>
     <columns>
         <column name="count(*)" alias="count" />

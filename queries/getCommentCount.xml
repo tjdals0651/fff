@@ -1,6 +1,6 @@
-<query id="getDocumentCount" action="select">
+<query id="getCommentCount" action="select">
     <tables>
-        <table name="documents" />
+        <table name="comments" />
     </tables>
     <columns>
         <column name="count(*)" alias="count" />

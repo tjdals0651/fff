@@ -1,6 +1,6 @@
-<query id="getDocumentCount" action="select">
+<query id="getTrackbackCount" action="select">
     <tables>
-        <table name="documents" />
+        <table name="trackbacks" />
     </tables>
     <columns>
         <column name="count(*)" alias="count" />
