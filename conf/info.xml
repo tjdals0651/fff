@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="0.2">
-    <title xml:lang="ko">모듈</title>
-    <title xml:lang="zh-CN">模块列表</title>
-    <title xml:lang="jp">モジュール</title>
-    <title xml:lang="en">Module</title>
-    <title xml:lang="vi">Module</title>
-    <title xml:lang="es">Módulo</title>
-    <title xml:lang="ru">Модули</title>
-    <title xml:lang="zh-TW">模組</title>
-    <title xml:lang="tr">Modül</title>
-    <description xml:lang="ko">모듈을 생성하고 관리합니다.</description>
-    <description xml:lang="zh-CN">生成及管理模块的模块。</description>
-    <description xml:lang="jp">モジュールの生成、管理するモジュールです。</description>
-    <description xml:lang="en">Creating/managering the other modules.</description>
-    <description xml:lang="vi">Module cho phép tạo và quản lý những Module khác.</description>
-    <description xml:lang="es">Este módulo is para crear y manejar los otros módulos.</description>
-    <description xml:lang="ru">Этот модуль служит для создания/управления другими модулями.</description>
-    <description xml:lang="zh-TW">用於建立與管理其他模組。</description>
-    <description xml:lang="tr">Bu modül, başka modüller oluşturmak ve yönetmek içindir.</description>
+    <title xml:lang="ko">회원</title>
+    <title xml:lang="zh-CN">会员</title>
+    <title xml:lang="jp">会員</title>
+    <title xml:lang="en">Member</title>
+    <title xml:lang="vi">Quản lý thành viên</title>
+    <title xml:lang="es">Usuario Gestión</title>
+    <title xml:lang="ru">Управление пользователями</title>
+    <title xml:lang="zh-TW">會員管理</title>
+    <title xml:lang="tr">Üye Yönetimi</title>
+    <description xml:lang="ko">회원 관리 및 설정을 합니다.</description>
+    <description xml:lang="zh-CN">对会员进行管理及相关设置的模块。</description>
+    <description xml:lang="jp">会員管理及び会員関連設定などを行うモジュールです。</description>
+    <description xml:lang="en">This module is for managing or configuring members.</description>
+    <description xml:lang="vi">Module này dành cho việc quản lý và tạo thành viên.</description>
+    <description xml:lang="es">Este módulo es para el manejo y la configuración de los usuarios.</description>
+    <description xml:lang="ru">Этот модуль служит для управления и конфигурирования пользователей.</description>
+    <description xml:lang="zh-TW">對會員進行管理與相關設置的模組。</description>
+    <description xml:lang="tr">Bu modül üyeleri yönetmek/yapılandırmak için kullanılır</description>
     <version>1.7</version>
     <date>2013-11-27</date>
-    <category>system</category>
+    <category>member</category>
 
     <author email_address="developers@xpressengine.com" link="http://xpressengine.com/">
         <name xml:lang="ko">NAVER</name>
